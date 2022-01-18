@@ -8,6 +8,5 @@
 # Ender Dragon Drops loop function
 ##########################################
 
-#Waiting until the dragon has been defeated...
-execute at @a[scores={EDK.detect=1..},nbt={Dimension:1}] run function dragondrops:defeated
-
+#Waiting until the dragon is defeated...
+execute at @a[scores={EDK.detect=1..}] run function dragondrops:defeated
