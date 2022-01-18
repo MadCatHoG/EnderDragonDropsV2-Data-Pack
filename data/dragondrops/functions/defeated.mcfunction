@@ -1,9 +1,9 @@
 ##########################################
 # Author: MadCat (youtube.com/MadCatHoG) 
 # Date: Jul 22, 2018
-# Version: 2.1
+# Version: 2.2
 # Updated: Jan, 17, 2022
-# Minecraft Version 1.13.X-1.14.X
+# Minecraft Version 1.15.X-1.18.X
 # Description:
 # Actions when the dragon is defeated
 ##########################################
@@ -16,9 +16,9 @@ scoreboard players add EDD.Anim EDK.detect 1
 #Detecting new fountain placement
 execute at @e[tag=FD.Landed] if block ~1 ~-4 ~ minecraft:end_portal run tag @e[tag=FD.Landed] add F.Ready
 
-execute if score EDD.Anim EDK.detect matches 70..70 run execute as @e[tag=F.Ready] at @s run setblock ~ ~ ~ minecraft:dragon_egg destroy
-execute if score EDD.Anim EDK.detect matches 70..70 run execute as @e[tag=F.Ready] at @s run summon minecraft:item ~ ~2 ~ {Item:{id:"minecraft:elytra",Count:1}}
-execute if score EDD.Anim EDK.detect matches 70..70 run tag @e[tag=F.Ready] add FD.Done
+execute if score EDD.Anim EDK.detect matches 100..100 run execute as @e[tag=F.Ready] at @s run setblock ~ ~ ~ minecraft:dragon_egg destroy
+execute if score EDD.Anim EDK.detect matches 100..100 run execute as @e[tag=F.Ready] at @s run summon minecraft:item ~ ~2 ~ {Item:{id:"minecraft:elytra",Count:1}}
+execute if score EDD.Anim EDK.detect matches 102..102 run tag @e[tag=F.Ready] add FD.Done
 
 execute as @e[tag=FD.Landed] at @s run particle minecraft:portal 0 ~-1 0 1 ~2 1 1 1200 force
 
